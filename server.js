@@ -4,7 +4,11 @@ const express     = require('express');
 const bodyParser  = require('body-parser');
 const expect      = require('chai').expect;
 const cors        = require('cors');
+const mongoose        = require('mongoose');
 require('dotenv').config();
+
+const mongodb = process.env.mongodb;
+mongoose.connect('mongodb://https://enigmatic-escarpment-59847.herokuapp.com/issue_tracker');
 
 const apiRoutes         = require('./routes/api.js');
 const fccTestingRoutes  = require('./routes/fcctesting.js');
@@ -36,9 +40,9 @@ app.route('/')
 //For FCC testing purposes
 fccTestingRoutes(app);
 
-//Routing for API 
-apiRoutes(app);  
-    
+//Routing for API
+apiRoutes(app);
+
 //404 Not Found Middleware
 app.use(function(req, res, next) {
   res.status(404)

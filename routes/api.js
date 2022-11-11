@@ -2,7 +2,7 @@
 
 const { getDate, getId } = require("../utils/utils");
 const data = require("../db/db");
-
+import mongoose from 'mongoose';
 
 module.exports = function(app) {
   app
