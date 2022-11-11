@@ -4,11 +4,10 @@ const express     = require('express');
 const bodyParser  = require('body-parser');
 const expect      = require('chai').expect;
 const cors        = require('cors');
-const mongoose        = require('mongoose');
+
 require('dotenv').config();
 
-const mongodb = process.env.mongodb;
-mongoose.connect('mongodb://https://enigmatic-escarpment-59847.herokuapp.com/issue_tracker');
+
 
 const apiRoutes         = require('./routes/api.js');
 const fccTestingRoutes  = require('./routes/fcctesting.js');
