@@ -1,13 +1,13 @@
 "use strict";
 
 const { getDate, getId } = require("../utils/utils");
-const data = require("../db/db");
+const data = require("mongodb");
 import mongoose from 'mongoose';
 const mongoose        = require('mongoose');
 
 module.exports = function(app) {
 
-  const mongodb = process.env.mongodb;
+const mongodb = process.env.mongodb;
 mongoose.connect('mongodb:https://enigmatic-escarpment-59847.herokuapp.com/issue_tracker');
 
   app
