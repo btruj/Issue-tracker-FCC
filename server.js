@@ -6,7 +6,7 @@ const expect      = require('chai').expect;
 const cors        = require('cors');
 
 require('dotenv').config();
-
+require('./db-connection');
 
 
 const apiRoutes         = require('./routes/api.js');
