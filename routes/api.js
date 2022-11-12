@@ -1,8 +1,8 @@
 "use strict";
 
 const { getDate, getId } = require("../utils/utils");
-const data = require("db-connection");
 
+const data = require("../db-connection").data;
 
 module.exports = function(app) {
 

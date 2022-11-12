@@ -4,4 +4,4 @@ const db = mongoose.connect(process.env.DB, {
     useNewUrlParser: true,
 });
 
-module.exports = db;
+module.exports.data = data;
